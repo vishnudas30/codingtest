@@ -6,8 +6,15 @@
 - H2 - In memory database.
 - Firebase auth.
 
+Email to vishnudas30@gmail.com for login credentails.
+
 ## Screenshots
 
 ![Screenshot](login.JPG)
+![Screenshot](home.JPG)
+![Screenshot](add.JPG)
+![Screenshot](edit.JPG)
+![Screenshot](afteredit.JPG)
+![Screenshot](firebase.JPG)
 
 
