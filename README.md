@@ -8,6 +8,6 @@
 
 ## Screenshots
 
-![Screenshot](login.png)
+![Screenshot](login.JPG)
 
 
