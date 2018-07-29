@@ -34,8 +34,6 @@ public class PatientRepositoryImpl implements PatientRepository {
 		tx.begin();
 		Criteria criteria = em.unwrap(Session.class).createCriteria(Patient.class);
 		List<Patient> patientList = criteria.list();
-		
-		System.out.println(patientList.get(0).toString());
 		tx.commit();
 		em.close();
 

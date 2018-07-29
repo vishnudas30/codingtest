@@ -3,8 +3,6 @@ app.controller('EditController', ['$scope','$location','$http', '$routeParams', 
     
 	//var patientId = $routeParams.params;
 	var patientId=$location.path().split('/').pop();
-	alert(patientId);
-	
 	  $http.get("http://localhost:8080/v1/doctor/getpatient/"+patientId+"/").
       then(function(response) {
           $scope.patient = response.data;

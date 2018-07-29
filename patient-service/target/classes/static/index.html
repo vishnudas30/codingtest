@@ -3,9 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Doctor</title>
-        
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/starter-template.css" rel="stylesheet">
     
 		<!-- AngularJS and ng-Route -->
@@ -37,13 +36,25 @@
 				</div>
 
                  <div id="logoutDiv" ng-hide="userId" class="pull-right">
-            <a class="btn btn-primary" ng-click="login('google')"><i class="fa fa-google"></i>Sing in with Google</a>
-        </div>
+			<p>
+			
+			<p id="current-email" style="display: none"></p>
+			<button type="button" id="signout" style="display: none">Signout</button>
+			</p>
+			<div id="signin">
+				<h4>Firebase Log In</h4>
+				<input type="email" id="signinEmail" placeholder="enter your email">
+				<input type="password" id="signinPassword"
+					placeholder="enter your password" />
+				<button type="button" name="button" id="signin">Log In</button>
+			</div>
+
+		</div>
 			  </div>
 			</nav>
 			
 			<!-- Container -->
-			<div class="container starter-template">
+			<div class="container starter-template" id="patinetView">
 
           <div ng-view></div>
         
@@ -58,4 +69,6 @@
 			<script src="js/controllers/EditController.js"></script> 
 	
 		</body>
+		 <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script src="firebase.js"></script>
 	</html>
