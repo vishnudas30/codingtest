@@ -1,0 +1,48 @@
+<h1>Edit Patient</h1>
+
+<form name="edit_form" class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="patientId" class="col-sm-2 control-label">PatientId</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="patientId"
+             ng-model="patient.patientId" readonly/>
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label for="fname" class="col-sm-2 control-label">First Name:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="fname"
+             ng-model="patient.firstName" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lname" class="col-sm-2 control-label">Last Name:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="lname"
+             ng-model="patient.lastName" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="contact" class="col-sm-2 control-label">Contact Number </label>
+    <div class="col-sm-4">
+      <input class="form-control" id="contact"
+             ng-model="patient.contactNum" />
+    </div>
+  </div>
+  
+   <div class="form-group">
+    <label for="status" class="col-sm-2 control-label">Status  </label>
+    <div class="col-sm-4">
+      <input class="form-control" id="status"
+             ng-model="patient.status" />
+    </div>
+  </div>
+  <div class="form-group">
+
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" id="submit" class="btn btn-small btn-primary" ng-click="editPatient()" class="btn btn-small btn-primary"></button> <a href="#/" class="btn btn-small btn-danger">Cancel</a>
+    </div>
+  </div>
+</form>

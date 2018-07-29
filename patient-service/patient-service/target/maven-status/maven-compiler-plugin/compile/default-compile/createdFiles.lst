@@ -1,0 +1,11 @@
+com\doctor\anywhere\config\CorsConfig.class
+com\doctor\anywhere\config\WebConfiguration.class
+com\doctor\anywhere\PatientApplication.class
+com\doctor\anywhere\patient\service\PatientServiceImpl.class
+com\doctor\anywhere\patient\model\Patient.class
+com\doctor\anywhere\config\CorsConfig$1.class
+com\doctor\anywhere\patient\service\PatientService.class
+com\doctor\anywhere\patient\repository\PatientRepositoryImpl.class
+com\doctor\anywhere\patient\repository\PatientRepository.class
+com\doctor\anywhere\patient\model\Address.class
+com\doctor\anywhere\patient\api\PatientController.class
