@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: patient-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vishnudasl
+Implementation-Vendor-Id: com.doctor.anywhere
+Build-Jdk: 1.8.0_172
+Implementation-URL: http://projects.spring.io/spring-boot/patient-serv
+ ice/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
