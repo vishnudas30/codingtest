@@ -15,6 +15,7 @@ Email to vishnudas30@gmail.com for login credentails.
 ![Screenshot](add.JPG)
 ![Screenshot](edit.JPG)
 ![Screenshot](afteredit.JPG)
+![Screenshot](delete.JPG)
 ![Screenshot](firebase.JPG)
 
 
