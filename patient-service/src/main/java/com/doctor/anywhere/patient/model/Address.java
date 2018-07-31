@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 public class Address implements Serializable{
 	@Id
@@ -29,6 +31,7 @@ public class Address implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="patientId", nullable=false)
+	@JsonBackReference
     private Patient patient;
 	
 	

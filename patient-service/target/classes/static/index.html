@@ -1,11 +1,15 @@
 <!doctype html>
 <html>
     <head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
         <meta charset="utf-8">
         <title>Doctor</title>
 		<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/starter-template.css" rel="stylesheet">
+    <link href="css/pagination.css" rel="stylesheet">
+     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
     
 		<!-- AngularJS and ng-Route -->
 		
@@ -17,7 +21,7 @@
         
 		<!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
-
+       
     </head>
 	
 	<body ng-app="myApp">
@@ -54,9 +58,13 @@
 			</nav>
 			
 			<!-- Container -->
+			<div id="pleaseSignIn">
+			<br><br>
+            <h3 align="center">Please Log in to manage patients...</h3>
+            </div>
 			<div class="container starter-template" id="patinetView">
 
-          <div ng-view></div>
+             <div ng-view></div>
         
 			</div>
 					

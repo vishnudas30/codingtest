@@ -1,10 +1,10 @@
 app.controller('ListController', function($scope, $http, $location) {
-  
+	
   $http.get('http://localhost:8080/v1/doctor/getpatients').
         then(function(response) {
             $scope.patients = response.data;
-            console.log($scope.patients);
         });
+  
   
   
   $scope.deletePatient = function(pat) {	

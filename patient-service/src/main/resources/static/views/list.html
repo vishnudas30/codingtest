@@ -1,19 +1,26 @@
-<table class="table" >
-  <caption class="lead">Patients</caption>
+  <caption class="lead"><h2>Patients</h2></caption><br><br>
+<table class="table table-striped" id="patientTable">
+  <form class="form-inline">
+        <div class="form-group">
+            <input style="width:20%;" type="text" ng-model="searchKeyword" class="form-control" placeholder="Search">
+        </div>
+  </form>
   <thead>
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Contact Number</th>
 	  <th> Status </th>
+	  <th> Country </th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="pat in patients">
+    <tr ng-repeat="pat in patients | filter: searchKeyword">
       <td>{{pat.firstName}}</td>
       <td>{{pat.lastName}}</td>
       <td>{{pat.contactNum}}</td>
       <td>{{pat.status}}</td>
+      <td>{{pat.addrs[0].country}}</td>
 	  <td><a href="#/edit/{{pat.patientId}}" class="btn btn-small btn-primary">Edit</a> 
 	  <a class="btn btn-small btn-danger" ng-click="deletePatient(pat)">Delete</a>
 	  </td>
@@ -21,6 +28,7 @@
     </tr>
   </tbody>
 </table>
+
 <p>
     <a href="#/add" class="btn btn-success" role="button" style="background-color: #88D8D2;">Add New Patient</a>
 </p>

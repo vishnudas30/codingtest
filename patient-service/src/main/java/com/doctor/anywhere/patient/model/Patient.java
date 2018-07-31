@@ -3,6 +3,7 @@ package com.doctor.anywhere.patient.model;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +12,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Patient implements Serializable{
@@ -24,8 +28,8 @@ public class Patient implements Serializable{
 	private String lastName;
 	@Column
 	private String contactNum;
-	
-	@OneToMany(fetch = FetchType.EAGER,mappedBy="patient")
+	@OneToMany(fetch = FetchType.EAGER,mappedBy="patient", cascade = CascadeType.REMOVE)
+	@JsonManagedReference
     private Set<Address> addrs;
 	
 	@Column
@@ -66,5 +70,6 @@ public class Patient implements Serializable{
 	public void setAddrs(Set<Address> addrs) {
 		this.addrs = addrs;
 	}
+	
 	
 }

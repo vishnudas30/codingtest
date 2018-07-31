@@ -1,13 +1,12 @@
 package com.doctor.anywhere.patient.repository;
 
-import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -32,8 +31,12 @@ public class PatientRepositoryImpl implements PatientRepository {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		Criteria criteria = em.unwrap(Session.class).createCriteria(Patient.class);
-		List<Patient> patientList = criteria.list();
+		
+		org.hibernate.Session session = (Session) em.getDelegate();
+		
+		//Criteria criteria = em.unwrap(Session.class).createCriteria(Address.class);
+		//List<Patient> patientList = criteria.list();
+		List<Patient> patientList = session.createQuery("from Patient").list();
 		tx.commit();
 		em.close();
 
@@ -48,6 +51,9 @@ public class PatientRepositoryImpl implements PatientRepository {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(body);
+		Address a  = body.getAddrs().iterator().next();
+		a.setPatient(body);
+		em.persist(a);
 		tx.commit();
 		em.close();
 	}

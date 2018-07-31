@@ -22,11 +22,15 @@ auth.onAuthStateChanged(firebaseUser => {
     singoutButton.style.display = 'block';
     singinForm.style.display = 'none';
     patinetView.style.display='block';
+    pleaseSignIn.style.display='none';
+    
   } else{
     singoutButton.style.display = 'none';
     singinForm.style.display = 'block';
     currentEmail.style.display = 'none';
     patinetView.style.display='none';
+    pleaseSignIn.style.display='block';
+
   }
 
 });
